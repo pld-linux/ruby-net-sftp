@@ -15,7 +15,8 @@ Requires:	ruby-Net-SSH
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Net::SFTP is to SFTP as Net::FTP is to FTP and Net::HTTP is to HTTP. Perform non-interactive SFTP processing, purely from Ruby!
+Net::SFTP is to SFTP as Net::FTP is to FTP and Net::HTTP is to HTTP.
+Perform non-interactive SFTP processing, purely from Ruby!
 
 %prep
 %setup -q -n net-sftp-%{version}
