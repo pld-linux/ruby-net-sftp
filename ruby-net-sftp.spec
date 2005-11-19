@@ -1,6 +1,3 @@
-%define		ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define		ruby_rubylibdir	%(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define		ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 Summary:	Ruby SFTP library
 Summary(pl):	Biblioteka SFTP dla jêzyka Ruby
 Name:		ruby-Net-SFTP
@@ -11,6 +8,7 @@ Group:		Development/Libraries
 Source0:	http://rubyforge.org/frs/download.php/2561/net-sftp-%{version}.tar.bz2
 # Source0-md5:	09d8df913c7a0c650e4d3952b4cb3c65
 URL:		http://net-ssh.rubyforge.org/
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 Requires:	ruby-Net-SSH
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
