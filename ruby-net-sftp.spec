@@ -8,9 +8,10 @@ Group:		Development/Libraries
 Source0:	http://rubyforge.org/frs/download.php/2561/net-sftp-%{version}.tar.bz2
 # Source0-md5:	09d8df913c7a0c650e4d3952b4cb3c65
 URL:		http://net-ssh.rubyforge.org/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
 Requires:	ruby-Net-SSH
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
