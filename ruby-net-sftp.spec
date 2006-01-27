@@ -1,12 +1,12 @@
 Summary:	Ruby SFTP library
 Summary(pl):	Biblioteka SFTP dla jêzyka Ruby
 Name:		ruby-Net-SFTP
-Version:	0.9.0
-Release:	2
+Version:	1.1.0
+Release:	1
 License:	GPL
 Group:		Development/Libraries
-Source0:	http://rubyforge.org/frs/download.php/2561/net-sftp-%{version}.tar.bz2
-# Source0-md5:	09d8df913c7a0c650e4d3952b4cb3c65
+Source0:	http://rubyforge.org/frs/download.php/7929/net-sftp-%{version}.tar.bz2
+# Source0-md5:	bd87febdab5d4613319f68a4edd6feab
 URL:		http://net-ssh.rubyforge.org/
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
