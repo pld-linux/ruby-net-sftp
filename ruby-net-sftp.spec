@@ -1,5 +1,5 @@
 Summary:	Ruby SFTP library
-Summary(pl.UTF-8):   Biblioteka SFTP dla języka Ruby
+Summary(pl.UTF-8):	Biblioteka SFTP dla języka Ruby
 Name:		ruby-Net-SFTP
 Version:	1.1.0
 Release:	1
