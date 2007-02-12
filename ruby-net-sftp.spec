@@ -1,5 +1,5 @@
 Summary:	Ruby SFTP library
-Summary(pl):	Biblioteka SFTP dla jêzyka Ruby
+Summary(pl.UTF-8):   Biblioteka SFTP dla jÄ™zyka Ruby
 Name:		ruby-Net-SFTP
 Version:	1.1.0
 Release:	1
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Net::SFTP is to SFTP as Net::FTP is to FTP and Net::HTTP is to HTTP.
 Perform non-interactive SFTP processing, purely from Ruby!
 
-%description -l pl
-Net::SFTP ma siê do SFTP tak, jak Net::FTP do FTP i Net::HTTP do HTTP.
-Umo¿liwia nieinteraktywne przetwarzanie SFTP w czystym Rubym.
+%description -l pl.UTF-8
+Net::SFTP ma siÄ™ do SFTP tak, jak Net::FTP do FTP i Net::HTTP do HTTP.
+UmoÅ¼liwia nieinteraktywne przetwarzanie SFTP w czystym Rubym.
 
 %prep
 %setup -q -n net-sftp-%{version}
