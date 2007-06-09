@@ -33,6 +33,7 @@ ruby setup.rb config \
 ruby setup.rb setup
 rdoc --inline-source --op rdoc lib
 rdoc --ri --op ri lib
+rm ri/*.rid
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -49,4 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{ruby_rubylibdir}/*
-%{ruby_ridir}/*
+%{ruby_ridir}/Net/SFTP
