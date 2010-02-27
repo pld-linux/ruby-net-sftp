@@ -14,6 +14,7 @@ BuildRequires:	ruby-modules
 Requires:	ruby-net-ssh >= 2.0
 %{?ruby_mod_ver_requires_eq}
 Obsoletes:	ruby-Net-SFTP
+Provides:	ruby-Net-SFTP
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
