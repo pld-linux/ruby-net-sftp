@@ -62,21 +62,29 @@ Dokumentacji w formacie ri dla %{pkgname}.
 %setup -q -n %{pkgname}-%{version}
 
 %build
+# write .gemspec
+%__gem_helper spec
+
+%if %{with doc}
 rdoc --inline-source --op rdoc lib
 rdoc --ri --op ri lib
 rm -r ri/Net/SSH
 rm -r ri/Net/cdesc-Net.ri
 rm ri/*.rid
 rm ri/cache.ri
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{ruby_vendorlibdir}
+install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_specdir}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
+cp -p %{pkgname}-%{version}.gemspec $RPM_BUILD_ROOT%{ruby_specdir}
 
+%if %{with doc}
 install -d $RPM_BUILD_ROOT{%{ruby_ridir},%{ruby_rdocdir}/%{name}-%{version}}
 cp -a ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 cp -a rdoc/* $RPM_BUILD_ROOT%{ruby_rdocdir}/%{name}-%{version}
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -85,6 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{ruby_vendorlibdir}/net/sftp.rb
 %{ruby_vendorlibdir}/net/sftp
+%{ruby_specdir}/%{pkgname}-%{version}.gemspec
 
 %if %{with doc}
 %files rdoc
