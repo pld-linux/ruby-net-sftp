@@ -8,7 +8,7 @@ Summary:	Ruby SFTP library
 Summary(pl.UTF-8):	Biblioteka SFTP dla języka Ruby
 Name:		ruby-%{pkgname}
 Version:	2.1.2
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Libraries
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
@@ -102,5 +102,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files ri
 %defattr(644,root,root,755)
-%{ruby_ridir}/Net/SFTP
+%{ruby_ridir}/Net
+%{ruby_ridir}/Object
 %endif
