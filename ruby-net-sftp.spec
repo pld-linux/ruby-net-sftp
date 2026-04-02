@@ -8,7 +8,7 @@ Summary:	Ruby SFTP library
 Summary(pl.UTF-8):	Biblioteka SFTP dla języka Ruby
 Name:		ruby-%{pkgname}
 Version:	2.1.2
-Release:	3
+Release:	4
 License:	MIT
 Group:		Development/Libraries
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
